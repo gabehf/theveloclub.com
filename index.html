@@ -1,21 +1,134 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-        <body style="background-color:rgb(0, 0, 0);"></body>
-       
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
         <link rel="stylesheet" href="style.css">
     </head>
     
-    <body>
-        <h1 style="color: white;">INVITE ONLY</h1>
-        <input type="password" id="Name" name="Name" placeholder="password">
-
+    <body style="background-color: #000;">
+        <div id="content">
+            <div id="header">
+                <h1>THE VELO CLUB</h1>
+                <h2>(Artist Owned and Operated)</h2>
+            </div>
+            
+            <div id="entry">
+                <h2>INVITE ONLY</h2>
+                <input type="password" id="Name" name="Name" placeholder="password">
+            </div>
+            <div class="photobanner">
+                <img class="first" src="assets/velo.png">
+                <img src="assets/velo.png">
+                <img src="assets/velo.png">
+                <img src="assets/velo.png">
+                <img src="assets/velo.png">
+                <img src="assets/velo.png">
+                <img src="assets/velo.png">
+                <img src="assets/velo.png">
+            </div>
+        </div>
     </body>
 
-    
+    <style>
+    :root {
+        --anim-stop: -1336px;
+        --anim-time: 18s;
+    }
+    body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-weight: 300;
+        color: white;
+    }
+
+    #content {
+        width: 100%;
+        text-align: center;
+        margin: 15vh auto;
+        overflow: hidden;
+    }
+
+    #entry {
+        margin-top: 10vh;
+    }
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 0px;
+    } 
+    h2 {
+        margin-top: 0px;
+    }
+    input {
+        font-size: 14px;
+        width: 200px;
+        height: 10px;
+        padding: 10px;
+    }
+    /*keyframe animations*/
+    .first {
+        margin-left: 0px;
+        -webkit-animation: bannermove var(--anim-time) linear infinite;
+        -moz-animation: bannermove var(--anim-time) linear infinite;
+            -ms-animation: bannermove var(--anim-time) linear infinite;
+            -o-animation: bannermove var(--anim-time) linear infinite;
+                animation: bannermove var(--anim-time) linear infinite;
+    }
+
+    @keyframes bannermove {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: var(--anim-stop);
+    }
+
+    }
+
+    @-moz-keyframes bannermove {
+    0% {
+    margin-left: 0px;
+    }
+    100% {
+    margin-left: var(--anim-stop);
+    }
+
+    }
+
+    @-webkit-keyframes bannermove {
+    0% {
+    margin-left: 0px;
+    }
+    100% {
+    margin-left: var(--anim-stop);
+    }
+
+    }
+
+    @-ms-keyframes bannermove {
+    0% {
+    margin-left: 0px;
+    }
+    100% {
+    margin-left: var(--anim-stop);
+    }
+
+    }
+
+    @-o-keyframes bannermove {
+    0% {
+    margin-left: 0px;
+    }
+    100% {
+    margin-left: var(--anim-stop);
+    }
+
+    }
+
+    .photobanner {
+        height: 296px;
+        width: 2770px;
+        position: absolute;
+        bottom: 0px;
+    }
+    </style>
+
 </html>
